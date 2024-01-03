@@ -5,8 +5,8 @@ def perform_data_transformations():
     spark = SparkSession.builder.appName("DataTransformations").getOrCreate()
 
     # Load data from Cloud SQL
-    df = spark.read.format("jdbc").option("url", "jdbc:postgresql://your-cloud-sql-ip:5432/your-database-name") \
-        .option("dbtable", "movies").option("user", "your-username").option("password", "your-password").load()
+    df = spark.read.format("jdbc").option("url", "jdbc:postgresql://35.184.55.219:5432/group5") \
+        .option("dbtable", "movies").option("user", "group5").option("password", "Tata").load()
 
     # Data transformations
     # i. Which movies were released in the year 2020?
